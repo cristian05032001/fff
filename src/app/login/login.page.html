@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="ENTRADA">
+   <ion-img src="/assets/icon/login.jpg"></ion-img><br>
+  </ion-card>
+  <form ngSubmit=login(forma) #forma="ngForm">
+  <ion-card class="ENTRADA">
+   <label for="name" ><strong>Usuario</strong></label><br>
+   <input type="email" id="usuario" placeholder="Usuario" ngModel #email="ngModel" name="email" minlength="3" maxlength="50" required><br>
+   
+   <label for="password"><strong>Contraseña</strong></label><br>
+   <input type="password" id="contraseña" placeholder="Contraseña" ngModel #password="ngModel" name="password" minlength="3" maxlength="50" required><br><br>
+  </ion-card>
+    <ion-button expand="full" href='/app/tabs/tab1' color="primary" type="submit" [disabled]=!forma.valid>Entrar</ion-button>
+  </form>
+</ion-content>
